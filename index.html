@@ -1,9 +1,24 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-WWQSE43DTT"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-WWQSE43DTT');
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ページのタイトル</title>
+    <title>Awakeエナジードリンク</title>
     <!-- スタイルシートのリンク -->
 
     <!-- 外部JavaScriptファイルのリンク -->
@@ -13,6 +28,22 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var promotionElement = document.getElementById('app-promotion');
+        promotionElement.style.display = 'none'; // ページ読み込み時に非表示
+
+        window.addEventListener('scroll', function () {
+          var showAfterHeight = 500; // この高さ(px)を超えたら表示
+
+          if (window.scrollY > showAfterHeight) {
+            promotionElement.style.display = 'block'; // 表示
+          } else {
+            promotionElement.style.display = 'none'; // 非表示
+          }
+        });
+      });
+    </script>
   </head>
   <body
     style="
@@ -23,10 +54,11 @@
     <main class="bg-gray-100 text-gray-900">
       <div class="max-w-screen-md bg-white mx-auto">
         <div
-          class="max-w-screen-md mx-auto fixed bottom-0 left-0 right-0 text-white z-10 px-4 mb-4"
+          id="app-promotion"
+          class="max-w-screen-md mx-auto fixed bottom-0 left-0 right-0 text-white z-10 px-4 mb-4 none"
         >
           <div class="container mx-auto flex justify-between items-center">
-            <a href="https://apps.apple.com/jp/app/id6463869235">
+            <a href="https://forms.gle/KhXJ5eayN1JDLSbj7">
               <img src="./images/offer_button.png" alt="App Store" />
             </a>
           </div>
@@ -42,7 +74,9 @@
         </div>
         <div>
           <img src="./images/offer_1_1.png" alt="" />
-          <img class="img-pulse_1" src="./images/offer_button.png" alt="" />
+          <a href="">
+            <img class="img-pulse_1" src="./images/offer_button.png" alt="" />
+          </a>
           <img src="./images/offer_1_2.png" alt="" />
         </div>
         <div>
@@ -57,11 +91,13 @@
         <div>
           <img src="./images/customer_voice.png" alt="" />
         </div>
-        <div class="pb-10">
+        <div class="pb-14 offer_button">
           <img src="./images/offer_2_1.png" alt="" />
-          <div class="offer_button">
-            <img class="img-pulse_1" src="./images/offer_button.png" alt="" />
-          </div>
+          <a href="https://forms.gle/KhXJ5eayN1JDLSbj7">
+            <div class="offer_button">
+              <img class="img-pulse_1" src="./images/offer_button.png" alt="" />
+            </div>
+          </a>
           <img src="./images/offer_2_2.png" alt="" />
         </div>
       </div>
