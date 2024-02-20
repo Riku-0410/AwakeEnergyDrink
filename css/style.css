@@ -1,17 +1,6 @@
-@keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1); /* 元のサイズ */
-  }
-  50% {
-    transform: scale(1.2); /* 20%拡大 */
-  }
-}
-
 .img-pulse_1 {
-  animation: pulse 3s infinite; /* アニメーションの適用: 名前、期間、繰り返し */
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .offer_button {
